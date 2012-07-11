@@ -1,0 +1,21 @@
+<gazebo version="1.0">
+  <model name="box_model" static="false">
+    <origin xyz="0 0 0.5" rpy="0 0 0"/>
+    <link name="body">
+      <collision name="geom">
+        <geometry>
+          <box size="1 1 1"/>
+        </geometry>
+      </collision>
+
+      <inertial mass="1.0"/>
+
+      <visual cast_shadows="true">
+        <geometry>
+          <box size="1 1 1"/>
+        </geometry>
+        <material name="Gazebo/Grey"/>
+      </visual>
+    </link>
+  </model>
+</gazebo>
