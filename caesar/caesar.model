@@ -1,21 +1,774 @@
 <gazebo version="1.0">
-  <model name="box_model" static="false">
-    <origin xyz="0 0 0.5" rpy="0 0 0"/>
-    <link name="body">
-      <collision name="geom">
+  <model name="caesar" static="true">
+
+  <!-- model definition (visuals and collision) -->
+    <origin pose="0.0725 0 0.33 0 0 0"/>
+    
+    <!-- base of the robot -->
+    <link name="caesar_base">
+      <collision name="caesar_base">
         <geometry>
-          <box size="1 1 1"/>
+          <box size="0.38 0.4 0.6"/>
         </geometry>
       </collision>
 
       <inertial mass="1.0"/>
 
-      <visual cast_shadows="true">
+      <visual cast_shadows="true" name="caesar_base">
         <geometry>
-          <box size="1 1 1"/>
+          <box size="0.38 0.4 0.6"/>
         </geometry>
-        <material name="Gazebo/Grey"/>
+        <material>
+          <ambient rgba="0 0 0 1" />
+        </material>
       </visual>
     </link>
+
+    
+    
+    <!-- rack holding monitor, kinect etc. -->  
+    <link name="caesar_rack">
+      <origin pose="0.15 0 0.3 0 0 0" />
+
+      <!-- horizontal casts (flat on caesar_base) -->
+      <collision name="horizontal_casts_1">
+        <origin pose="-0.1675 0.18 0.02 0 0 0" />
+        <geometry>
+          <box size="0.295 0.04 0.04"/>
+        </geometry>
+      </collision>
+      <visual cast_shadows="true" name="horizontal_casts_1">
+        <origin pose="-0.1675 0.18 0.02 0 0 0" />
+        <geometry>
+          <box size="0.295 0.04 0.04"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.5 0.5 0.5 1" />
+        </material>
+      </visual>
+
+      <collision name="horizontal_casts_2">
+        <origin pose="-0.1675 -0.18 0.02 0 0 0" />
+        <geometry>
+          <box size="0.295 0.04 0.04"/>
+        </geometry>
+      </collision>
+      <visual cast_shadows="true" name="horizontal_casts_2">
+        <origin pose="-0.1675 -0.18 0.02 0 0 0" />
+        <geometry>
+          <box size="0.295 0.04 0.04"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.5 0.5 0.5 1" />
+        </material>
+      </visual>
+
+
+
+      <!-- vertical casts, e.g. back rack -->
+      <collision name="vertical_casts_1">
+        <origin pose="0 -0.18 0.5 0 0 0" />
+        <geometry>
+          <box size="0.04 0.04 1"/>
+        </geometry>
+      </collision>
+      <visual cast_shadows="true" name="vertical_casts_1">
+        <origin pose="0 -0.18 0.5 0 0 0" />
+        <geometry>
+          <box size="0.04 0.04 1"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.5 0.5 0.5 1" />
+        </material>
+      </visual>
+
+      <collision name="vertical_casts_2">
+        <origin pose="0 0.18 0.5 0 0 0" />
+        <geometry>
+          <box size="0.04 0.04 1"/>
+        </geometry>
+      </collision>
+      <visual cast_shadows="true" name="vertical_casts_2">
+        <origin pose="0 0.18 0.5 0 0 0" />
+        <geometry>
+          <box size="0.04 0.04 1"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.5 0.5 0.5 1" />
+        </material>
+      </visual>
+
+
+
+      <!-- horizontal casts between vertical casts -->
+      <collision name="horzontal_vertical_casts_1">
+        <origin pose="0 0 0.02 0 0 0" />
+        <geometry>
+          <box size="0.04 0.32 0.04"/>
+        </geometry>
+      </collision>
+      <visual cast_shadows="true" name="horzontal_vertical_casts_1">
+        <origin pose="0 0 0.02 0 0 0" />
+        <geometry>
+          <box size="0.04 0.32 0.04"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.5 0.5 0.5 1" />
+        </material>
+      </visual>
+
+      <collision name="horzontal_vertical_casts_2">
+        <origin pose="0 0 0.42 0 0 0" />
+        <geometry>
+          <box size="0.04 0.32 0.04"/>
+        </geometry>
+      </collision>
+      <visual cast_shadows="true" name="horzontal_vertical_casts_2">
+        <origin pose="0 0 0.42 0 0 0" />
+        <geometry>
+          <box size="0.04 0.32 0.04"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.5 0.5 0.5 1" />
+        </material>
+      </visual>
+
+      <collision name="horzontal_vertical_casts_3">
+        <origin pose="0 0 0.72 0 0 0" />
+        <geometry>
+          <box size="0.04 0.32 0.04"/>
+        </geometry>
+      </collision>
+      <visual cast_shadows="true" name="horzontal_vertical_casts_3">
+        <origin pose="0 0 0.72 0 0 0" />
+        <geometry>
+          <box size="0.04 0.32 0.04"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.5 0.5 0.5 1" />
+        </material>
+      </visual>
+
+      <collision name="horzontal_vertical_casts_4">
+        <origin pose="0 0 0.82 0 0 0" />
+        <geometry>
+          <box size="0.04 0.32 0.04"/>
+        </geometry>
+      </collision>
+      <visual cast_shadows="true" name="horzontal_vertical_casts_4">
+        <origin pose="0 0 0.82 0 0 0" />
+        <geometry>
+          <box size="0.04 0.32 0.04"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.5 0.5 0.5 1" />
+        </material>
+      </visual>
+
+
+  
+      <!-- rack monitor -->
+      <collision name="rack_monitor">
+        <origin pose="0 0 0.54 0 0.436332313 0" />
+        <geometry>
+          <box size="0.025 0.3 0.2"/>
+        </geometry>
+      </collision>
+      <visual cast_shadows="true" name="rack_monitor">
+        <origin pose="0 0 0.54 0 0.436332313 0" />
+        <geometry>
+          <box size="0.025 0.3 0.2"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.3 0.3 0.3 1" />
+        </material>
+      </visual>
+
+
+
+      <!-- red emergency button -->
+      <collision name="red_emergency_button_1">
+        <origin pose="0.01 0 0.095 0 0 0" />
+        <geometry>
+          <box size="0.06 0.135 0.11"/>
+        </geometry>
+      </collision>
+      <visual cast_shadows="true" name="red_emergency_button_1">
+        <origin pose="0.01 0 0.095 0 0 0" />
+        <geometry>
+          <box size="0.06 0.135 0.11"/>
+        </geometry>
+        <material>
+          <ambient rgba="0 0 0 1" />
+        </material>
+      </visual>
+
+      <collision name="red_emergency_button_2">
+        <origin pose="0.017 0 0.15 0 0 0" />
+        <geometry>
+          <cylinder radius="0.02" length="0.01" />
+        </geometry>
+      </collision>
+      <visual cast_shadows="true" name="red_emergency_button_2">
+        <origin pose="0.017 0 0.15 0 0 0" />
+        <geometry>
+          <cylinder radius="0.02" length="0.01" />
+        </geometry>
+        <material>
+          <ambient rgba="1 0 0 1" />
+        </material>
+      </visual>
+    </link>
+
+  <!-- katana arm -->
+    <link name="caesar_katana_base">
+      <origin pose="-0.1 0 0.3 0 0 0"/>
+      <collision name="caesar_katana_base">
+        <origin pose="0 0 0.04 0 0 0"/>
+        <geometry>
+          <box size="0.08 0.08 0.08"/>
+        </geometry>
+      </collision>
+      <visual name="caesar_katana_base" cast_shadows="true">
+        <origin pose="0 0 0.04 0 0 0"/>
+        <geometry>
+          <box size="0.08 0.08 0.08"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    </link>
+
+
+
+    <link name="caesar_katana_joint1">
+      <origin pose="-0.1 0 0.38 0 0 0"/>
+      <collision name="caesar_katana_joint1_1">
+        <origin pose="0 0 0 1.570796327 1.570796327 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.14"/>
+        </geometry>
+      </collision>
+      <visual name="caesar_katana_joint1_1_1" cast_shadows="true">
+        <origin pose="0 0 0 1.570796327 1.570796327 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.08"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+      <visual name="caesar_katana_joint1_1_2" cast_shadows="true">
+        <origin pose="0 0.045 0 1.570796327 1.570796327 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.7 0.7 0.7 1" />
+        </material>
+      </visual>
+      <visual name="caesar_katana_joint1_1_3" cast_shadows="true">
+        <origin pose="0 -0.045 0 1.570796327 1.570796327 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.7 0.7 0.7 1" />
+        </material>
+      </visual>
+      <visual name="caesar_katana_joint1_1_4" cast_shadows="true">
+        <origin pose="0 0.055 0 1.570796327 1.570796327 0"/>
+        <geometry>
+          <cylinder radius="0.035" length="0.02"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+      <visual name="caesar_katana_joint1_1_5" cast_shadows="true">
+        <origin pose="0 -0.055 0 1.570796327 1.570796327 0"/>
+        <geometry>
+          <cylinder radius="0.035" length="0.02"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+
+      <collision name="caesar_katana_joint1_2">
+        <origin pose="0 0 0.095 0 0 0"/>
+        <geometry>
+          <cylinder radius="0.03" length="0.19"/>
+        </geometry>
+      </collision>
+      <visual name="caesar_katana_joint1_2" cast_shadows="true">
+        <origin pose="0 0 0.095 0 0 0"/>
+        <geometry>
+          <cylinder radius="0.03" length="0.19"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.7 0.7 0.7 1" />
+        </material>
+      </visual>
+    </link>
+
+
+
+    <link name="caesar_katana_joint2">
+      <origin pose="-0.1 0 0.58 0 0 0"/>
+      <collision name="caesar_katana_joint2_1">
+        <origin pose="0 0 0 1.570796327 1.570796327 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.14"/>
+        </geometry>
+      </collision>
+      <visual name="caesar_katana_joint2_1_1" cast_shadows="true">
+        <origin pose="0 0 0 1.570796327 1.570796327 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.08"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+      <visual name="caesar_katana_joint2_1_2" cast_shadows="true">
+        <origin pose="0 0.045 0 1.570796327 1.570796327 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.7 0.7 0.7 1" />
+        </material>
+      </visual>
+      <visual name="caesar_katana_joint2_1_3" cast_shadows="true">
+        <origin pose="0 -0.045 0 1.570796327 1.570796327 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.7 0.7 0.7 1" />
+        </material>
+      </visual>
+      <visual name="caesar_katana_joint2_1_4" cast_shadows="true">
+        <origin pose="0 0.055 0 1.570796327 1.570796327 0"/>
+        <geometry>
+          <cylinder radius="0.035" length="0.02"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+      <visual name="caesar_katana_joint2_1_5" cast_shadows="true">
+        <origin pose="0 -0.055 0 1.570796327 1.570796327 0"/>
+        <geometry>
+          <cylinder radius="0.035" length="0.02"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+
+      <collision name="caesar_katana_joint2_2">
+        <origin pose="0 0 0.0695 0 0 0"/>
+        <geometry>
+          <cylinder radius="0.03" length="0.129"/>
+        </geometry>
+      </collision>
+      <visual name="caesar_katana_joint2_2" cast_shadows="true">
+        <origin pose="0 0 0.0695 0 0 0"/>
+        <geometry>
+          <cylinder radius="0.03" length="0.129"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.7 0.7 0.7 1" />
+        </material>
+      </visual>
+    </link>
+
+
+
+    <link name="caesar_katana_joint3">
+      <origin pose="-0.1 0 0.719 0 0 0"/>
+      <collision name="caesar_katana_joint3_1">
+        <origin pose="0 0 0 1.570796327 1.570796327 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.14"/>
+        </geometry>
+      </collision>
+      <visual name="caesar_katana_joint3_1_1" cast_shadows="true">
+        <origin pose="0 0 0 1.570796327 1.570796327 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.08"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+      <visual name="caesar_katana_joint3_1_2" cast_shadows="true">
+        <origin pose="0 0.045 0 1.570796327 1.570796327 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.7 0.7 0.7 1" />
+        </material>
+      </visual>
+      <visual name="caesar_katana_joint3_1_3" cast_shadows="true">
+        <origin pose="0 -0.045 0 1.570796327 1.570796327 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.7 0.7 0.7 1" />
+        </material>
+      </visual>
+      <visual name="caesar_katana_joint3_1_4" cast_shadows="true">
+        <origin pose="0 0.055 0 1.570796327 1.570796327 0"/>
+        <geometry>
+          <cylinder radius="0.035" length="0.02"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+      <visual name="caesar_katana_joint3_1_5" cast_shadows="true">
+        <origin pose="0 -0.055 0 1.570796327 1.570796327 0"/>
+        <geometry>
+          <cylinder radius="0.035" length="0.02"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+
+
+      <collision name="caesar_katana_joint3_2">
+        <origin pose="0 0 0.0532 0 0 0"/>
+        <geometry>
+          <cylinder radius="0.03" length="0.1064"/>
+        </geometry>
+      </collision>
+      <visual name="caesar_katana_joint3_2" cast_shadows="true">
+        <origin pose="0 0 0.0532 0 0 0"/>
+        <geometry>
+          <cylinder radius="0.03" length="0.09"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.7 0.7 0.7 1" />
+        </material>
+      </visual>
+    </link>
+
+
+
+    <link name="caesar_katana_gripper_base">
+      <origin pose="-0.1 0 0.8256 0 0 0"/>
+      <collision name="caesar_katana_gripper_base_1">
+        <geometry>
+          <cylinder radius="0.035" length="0.0168"/>
+        </geometry>
+      </collision>
+      <visual name="caesar_katana_gripper_base_1" cast_shadows="true">
+        <geometry>
+          <cylinder radius="0.035" length="0.0168"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+
+      <collision name="caesar_katana_gripper_base_2">
+        <origin pose="0 0 0.0484 0 0 0"/>
+        <geometry>
+          <cylinder radius="0.025" length="0.08"/>
+        </geometry>
+      </collision>
+      <visual name="caesar_katana_gripper_base_2" cast_shadows="true">
+        <origin pose="0 0 0.0484 0 0 0"/>
+        <geometry>
+          <cylinder radius="0.025" length="0.08"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.7 0.7 0.7 1" />
+        </material>
+      </visual>
+    </link>
+
+
+
+    <link name="caesar_katana_gripper_left">
+      <origin pose="-0.1 0.0098 0.914 0 0 0"/>
+      <collision name="caesar_katana_gripper_left_1">
+        <origin pose="0 0 0.019 -0.17 0 0"/>
+        <geometry>
+          <box size="0.03 0.014 0.0416"/>
+        </geometry>
+      </collision>
+      <visual name="caesar_katana_gripper_left_1" cast_shadows="true">
+        <origin pose="0 0 0.019 -0.17 0 0"/>
+        <geometry>
+          <box size="0.03 0.014 0.0416"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+
+      <collision name="caesar_katana_gripper_left_2">
+        <origin pose="0 0.0014 0.046 0.27 0 0"/>
+        <geometry>
+          <box size="0.03 0.014 0.02"/>
+        </geometry>
+      </collision>
+      <visual name="caesar_katana_gripper_left_2" cast_shadows="true">
+        <origin pose="0 0.0014 0.046 0.27 0 0"/>
+        <geometry>
+          <box size="0.03 0.014 0.02"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+
+      <collision name="caesar_katana_gripper_left_3">
+        <origin pose="0 -0.0008 0.058 0 0 0"/>
+        <geometry>
+          <box size="0.03 0.014 0.01"/>
+        </geometry>
+      </collision>
+      <visual name="caesar_katana_gripper_left_3" cast_shadows="true">
+        <origin pose="0 -0.0008 0.058 0 0 0"/>
+        <geometry>
+          <box size="0.03 0.014 0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    </link>
+
+
+
+    <link name="caesar_katana_gripper_right">
+      <origin pose="-0.1 -0.0098 0.914 0 0 0"/>
+      <collision name="caesar_katana_gripper_right_1">
+        <origin pose="0 0 0.019 0.17 0 0"/>
+        <geometry>
+          <box size="0.03 0.014 0.0416"/>
+        </geometry>
+      </collision>
+      <visual name="caesar_katana_gripper_right_1" cast_shadows="true">
+        <origin pose="0 0 0.019 0.17 0 0"/>
+        <geometry>
+          <box size="0.03 0.014 0.0416"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+
+      <collision name="caesar_katana_gripper_right_2">
+        <origin pose="0 -0.0014 0.046 -0.27 0 0"/>
+        <geometry>
+          <box size="0.03 0.014 0.02"/>
+        </geometry>
+      </collision>
+      <visual name="caesar_katana_gripper_right_2" cast_shadows="true">
+        <origin pose="0 -0.0014 0.046 -0.27 0 0"/>
+        <geometry>
+          <box size="0.03 0.014 0.02"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+
+      <collision name="caesar_katana_gripper_right_3">
+        <origin pose="0 0.0008 0.058 0 0 0"/>
+        <geometry>
+          <box size="0.03 0.014 0.01"/>
+        </geometry>
+      </collision>
+      <visual name="caesar_katana_gripper_right_3" cast_shadows="true">
+        <origin pose="0 0.0008 0.058 0 0 0"/>
+        <geometry>
+          <box size="0.03 0.014 0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    </link>
+
+
+
+  <!-- kinect sensor -->
+
+    <!-- base for the kinect sensor -->
+    <link name="caesar_kinect_base">
+      <origin pose="0.15 0 1.175 0 0 0" />
+      <collision name="caesar_kinect_base">
+        <geometry>
+          <box size="0.04 0.04 0.07"/>
+        </geometry>
+      </collision>
+      <visual cast_shadows="true" name="caesar_kinect_base">
+        <geometry>
+          <box size="0.04 0.04 0.07"/>
+        </geometry>
+        <material>
+          <ambient rgba="0 0 0 1" />
+        </material>
+      </visual>
+    </link>
+
+
+    <!-- kinect sensor with fitting and additional sensor on top -->
+    <link name="caesar_kinect_sensor">
+      <origin pose="0.15 0 1.2225 0 0 0" />
+
+      <!-- connection to base -->
+      <collision name="caesar_kinect_connection">
+        <geometry>
+          <box size="0.04 0.04 0.025"/>
+        </geometry>
+      </collision>
+      <visual cast_shadows="true" name="caesar_kinect_connection">
+        <geometry>
+          <box size="0.04 0.04 0.025"/>
+        </geometry>
+        <material>
+          <ambient rgba="0 0 0 1" />
+        </material>
+      </visual>
+
+      <!-- stand of the sensor -->
+      <collision name="caesar_kinect_stand">
+        <origin pose="0 0 0.0175 0 0 0" />
+        <geometry>
+          <box size="0.075 0.08 0.04"/>
+        </geometry>
+      </collision>
+      <visual cast_shadows="true" name="caesar_kinect_stand">
+        <origin pose="0 0 0.0175 0 0 0" />
+        <geometry>
+          <box size="0.075 0.08 0.04"/>
+        </geometry>
+        <material>
+          <ambient rgba="0 0 0 1" />
+        </material>
+      </visual>
+
+      <!-- sensor + additional sensor -->
+      <collision name="caesar_kinect_sensor">
+        <origin pose="0 0 0.0725 0 0 0" />
+        <geometry>
+          <box size="0.06 0.28 0.07"/>
+        </geometry>
+      </collision>
+      <visual cast_shadows="true" name="caesar_kinect_sensor">
+        <origin pose="0 0 0.0725 0 0 0" />
+        <geometry>
+          <box size="0.06 0.28 0.07"/>
+        </geometry>
+        <material>
+          <ambient rgba="0 0 0 1" />
+        </material>
+      </visual>
+    </link>
+
+
+
+  <!-- joint definition -->
+    
+    <!-- connecting base and rack -->
+    <joint name="caesar_rack" type="revolute">
+      <parent link="caesar_base"/>
+      <child link="caesar_rack"/>
+      <axis xyz="0 0 0">
+        <limit lower="0" upper="0"/>
+      </axis>
+    </joint>
+
+
+
+    <!-- katana arm joints and connection to base-->
+    <joint name="caesar_katana_arm" type="revolute">
+      <parent link="caesar_base"/>
+      <child link="caesar_katana_base"/>
+      <axis xyz="0 0 1">
+        <limit lower="-2.958333082" upper="2.958333082"/>
+      </axis>
+    </joint>
+
+    <joint name="caesar_katana_link1" type="revolute">
+      <parent link="caesar_katana_base"/>
+      <child link="caesar_katana_joint1"/>
+      <axis xyz="0 1 0">
+        <limit lower="-0.523598775" upper="1.780235837"/>
+      </axis>
+    </joint>
+
+    <joint name="caesar_katana_link2" type="revolute">
+      <parent link="caesar_katana_joint1"/>
+      <child link="caesar_katana_joint2"/>
+      <axis xyz="0 1 0">
+        <limit lower="-2.138028334" upper="2.138028334"/>
+      </axis>
+    </joint>
+
+    <joint name="caesar_katana_link3" type="revolute">
+      <parent link="caesar_katana_joint2"/>
+      <child link="caesar_katana_joint3"/>
+      <axis xyz="0 1 0">
+        <limit lower="-1.954768762" upper="1.954768762"/>
+      </axis>
+    </joint>
+
+    <joint name="caesar_katana_gripper" type="revolute">
+      <parent link="caesar_katana_joint3"/>
+      <child link="caesar_katana_gripper_base"/>
+      <axis xyz="0 0 1">
+        <limit lower="-2.932153143" upper="2.932153143"/>
+      </axis>
+    </joint>
+
+    <joint name="caesar_katana_gripper_left" type="revolute">
+      <parent link="caesar_katana_gripper_base"/>
+      <child link="caesar_katana_gripper_left"/>
+      <axis xyz="1 0 0">
+        <limit lower="-0.4" upper="0"/>
+      </axis>
+    </joint>
+
+    <joint name="caesar_katana_gripper_right" type="revolute">
+      <parent link="caesar_katana_gripper_base"/>
+      <child link="caesar_katana_gripper_right"/>
+      <axis xyz="-1 0 0">
+        <limit lower="0" upper="0.4"/>
+      </axis>
+    </joint>
+
+
+
+    <!-- connecting rack and kinect joint -->
+    <joint name="caesar_kinect_base" type="revolute">
+      <parent link="caesar_rack"/>
+      <child link="caesar_kinect_base"/>
+      <axis xyz="0 0 0">
+        <limit lower="0" upper="0"/>
+      </axis>
+    </joint>
+
+    <!-- kinect joint -->
+    <joint name="caesar_kinect_joint" type="revolute">
+      <parent link="caesar_kinect_base"/>
+      <child link="caesar_kinect_sensor"/>
+      <axis xyz="0 1 0">
+        <limit lower="-2.36" upper="2.36"/>
+      </axis>
+    </joint>
+
   </model>
 </gazebo>

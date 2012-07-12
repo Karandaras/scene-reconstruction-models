@@ -1,21 +1,205 @@
 <gazebo version="1.0">
-  <model name="box_model" static="false">
-    <origin xyz="0 0 0.5" rpy="0 0 0"/>
+  <model name="cup" static="true">
+    <origin pose="0 0 0 0 0 0"/>
     <link name="body">
-      <collision name="geom">
+      <collision name="cup">
         <geometry>
-          <box size="1 1 1"/>
+          <mesh filename="/home/Karandaras/Downloads/models/cup/cup.dae"/>
         </geometry>
       </collision>
 
-      <inertial mass="1.0"/>
-
-      <visual cast_shadows="true">
+      <visual cast_shadows="true" name="cup">
         <geometry>
-          <box size="1 1 1"/>
+          <mesh filename="/home/Karandaras/Downloads/models/cup/cup.dae"/>
         </geometry>
-        <material name="Gazebo/Grey"/>
+        <material>
+          <ambient rgba="0 0 1 1" />
+        </material>
       </visual>
+    </link>
+
+    <link name="measure">
+      <visual cast_shadows="true" name="m_1">
+        <origin pose="0 0 0.005 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="1 0 0 1" />
+        </material>
+      </visual>
+      <visual cast_shadows="true" name="m_2">
+        <origin pose="0 0 0.015 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="0 1 0 1" />
+        </material>
+      </visual>
+      <visual cast_shadows="true" name="m_3">
+        <origin pose="0 0 0.025 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="1 0 0 1" />
+        </material>
+      </visual>
+      <visual cast_shadows="true" name="m_4">
+        <origin pose="0 0 0.035 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="0 1 0 1" />
+        </material>
+      </visual>
+      <visual cast_shadows="true" name="m_5">
+        <origin pose="0 0 0.045 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="1 0 0 1" />
+        </material>
+      </visual>
+      <visual cast_shadows="true" name="m_6">
+        <origin pose="0 0 0.055 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="0 1 0 1" />
+        </material>
+      </visual>
+      <visual cast_shadows="true" name="m_7">
+        <origin pose="0 0 0.065 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="1 0 0 1" />
+        </material>
+      </visual>
+      <visual cast_shadows="true" name="m_8">
+        <origin pose="0 0 0.075 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="0 1 0 1" />
+        </material>
+      </visual>
+      <visual cast_shadows="true" name="m_9">
+        <origin pose="0 0 0.085 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="1 0 0 1" />
+        </material>
+      </visual>
+      <visual cast_shadows="true" name="m_10">
+        <origin pose="0 0 0.095 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="0 1 0 1" />
+        </material>
+      </visual>
+      <visual cast_shadows="true" name="m_11">
+        <origin pose="0 0 0.105 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="1 0 0 1" />
+        </material>
+      </visual>
+      <visual cast_shadows="true" name="m_12">
+        <origin pose="0 0 0.115 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+        <material>
+          <ambient rgba="0 1 0 1" />
+        </material>
+      </visual>
+
+      <collision name="m_1">
+        <origin pose="0 0 0.005 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+      </collision>
+      <collision name="m_2">
+        <origin pose="0 0 0.015 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+      </collision>
+      <collision name="m_3">
+        <origin pose="0 0 0.025 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+      </collision>
+      <collision name="m_4">
+        <origin pose="0 0 0.035 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+      </collision>
+      <collision name="m_5">
+        <origin pose="0 0 0.045 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+      </collision>
+      <collision name="m_6">
+        <origin pose="0 0 0.055 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+      </collision>
+      <collision name="m_7">
+        <origin pose="0 0 0.065 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+      </collision>
+      <collision name="m_8">
+        <origin pose="0 0 0.075 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+      </collision>
+      <collision name="m_9">
+        <origin pose="0 0 0.085 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+      </collision>
+      <collision name="m_10">
+        <origin pose="0 0 0.095 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+      </collision>
+      <collision name="m_11">
+        <origin pose="0 0 0.105 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+      </collision>
+      <collision name="m_12">
+        <origin pose="0 0 0.115 0 0 0"/>
+        <geometry>
+          <box size="0.15 0.01 0.01"/>
+        </geometry>
+      </collision>
     </link>
   </model>
 </gazebo>
