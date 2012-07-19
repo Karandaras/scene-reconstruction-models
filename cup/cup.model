@@ -13,7 +13,7 @@
           <mesh filename="cup/cup.dae"/>
         </geometry>
         <material>
-          <ambient rgba="0 0 1 1" />
+          <ambient rgba="1 0.65 0 1" />
         </material>
       </visual>
     </link>
