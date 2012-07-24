@@ -770,5 +770,36 @@
       </axis>
     </joint>
 
+  <plugin name="RobotControllerPlugin" filename="libRobotControllerPlugin.so">
+    <rcjoint>1</rcjoint>
+    <gname1>caesar_kinect_joint</gname1>
+    <fname1>kinect</fname1>
+    <offset1>0</offset1>
+    <rcjoint>2</rcjoint>
+    <gname2>caesar_katana_gripper_right</gname2>
+    <fname2>gripper_right</fname2>
+    <offset2>1.0</offset2>
+    <rcjoint>3</rcjoint>
+    <gname3>caesar_katana_gripper_left</gname3>
+    <fname3>gripper_left</fname3>
+    <offset3>1.0</offset3>
+    <rcjoint>4</rcjoint>
+    <gname4>caesar_katana_gripper</gname4>
+    <fname4>gripper</fname4>
+    <offset4>-1</offset4>
+    <rcjoint>5</rcjoint>
+    <gname5>caesar_katana_arm</gname5>
+    <fname5>katana</fname5>
+    <rcjoint>6</rcjoint>
+    <gname6>caesar_katana_link1</gname6>
+    <fname6>katana_1</fname6>
+    <rcjoint>7</rcjoint>
+    <gname7>caesar_katana_link2</gname7>
+    <fname7>katana_2</fname7>
+    <rcjoint>8</rcjoint>
+    <gname8>caesar_katana_link3</gname8>
+    <fname8>katana_3</fname8>
+  </plugin>
+
   </model>
 </gazebo>
