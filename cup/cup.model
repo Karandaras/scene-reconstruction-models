@@ -4,12 +4,14 @@
     <link name="body">
       <collision name="cup">
         <geometry>
+          <!-- scale="X Y Z" to scale the model if needed -->
           <mesh filename="cup/cup.dae"/>
         </geometry>
       </collision>
 
       <visual cast_shadows="true" name="cup">
         <geometry>
+          <!-- scale="X Y Z" to scale the model if needed -->
           <mesh filename="cup/cup.dae"/>
         </geometry>
         <material>

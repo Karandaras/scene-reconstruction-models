@@ -772,33 +772,33 @@
 
   <plugin name="RobotControllerPlugin" filename="libRobotControllerPlugin.so">
     <rcjoint>1</rcjoint>
-      <gname1>caesar_kinect_joint</gname1>
-      <fname1>kinect</fname1>
-      <offset1>0</offset1>
+      <gname_1>caesar_kinect_joint</gname_1>
+      <fname_1>kinect</fname_1>
+      <offset_1>0</offset_1>
     <rcjoint>2</rcjoint>
-      <gname2>caesar_katana_gripper_right</gname2>
-      <fname2>gripper_right</fname2>
-      <offset2>1.0</offset2>
+      <gname_2>caesar_katana_gripper_right</gname_2>
+      <fname_2>gripper_right</fname_2>
+      <offset_2>1.0</offset_2>
     <rcjoint>3</rcjoint>
-      <gname3>caesar_katana_gripper_left</gname3>
-      <fname3>gripper_left</fname3>
-      <offset3>1.0</offset3>
+      <gname_3>caesar_katana_gripper_left</gname_3>
+      <fname_3>gripper_left</fname_3>
+      <offset_3>1.0</offset_3>
     <rcjoint>4</rcjoint>
-      <gname4>caesar_katana_gripper</gname4>
-      <fname4>gripper</fname4>
-      <offset4>-1</offset4>
+      <gname_4>caesar_katana_gripper</gname_4>
+      <fname_4>gripper</fname_4>
+      <offset_4>-1</offset_4>
     <rcjoint>5</rcjoint>
-      <gname5>caesar_katana_arm</gname5>
-      <fname5>katana</fname5>
+      <gname_5>caesar_katana_arm</gname_5>
+      <fname_5>katana</fname_5>
     <rcjoint>6</rcjoint>
-      <gname6>caesar_katana_link1</gname6>
-      <fname6>katana_1</fname6>
+      <gname_6>caesar_katana_link1</gname_6>
+      <fname_6>katana_1</fname_6>
     <rcjoint>7</rcjoint>
-      <gname7>caesar_katana_link2</gname7>
-      <fname7>katana_2</fname7>
+      <gname_7>caesar_katana_link2</gname_7>
+      <fname_7>katana_2</fname_7>
     <rcjoint>8</rcjoint>
-      <gname8>caesar_katana_link3</gname8>
-      <offset8>-1.0</offset8>
+      <gname_8>caesar_katana_link3</gname_8>
+      <offset_8>-1.0</offset_8>
   </plugin>
 
   </model>
