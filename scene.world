@@ -1,5 +1,7 @@
 <gazebo version="1.0">
 	<world name="reconstruction_world">
+    
+    <!-- setup the physics to have a realtime factor of ~1 -->
 		<physics type="ode" update_rate="100">
 			<ode>
 				<solver type="world" dt="0.01" iters="100" sor="1.3" />
@@ -7,6 +9,7 @@
 			<gravity xyz="0 0 -9.81" />
 		</physics>
 
+    <!-- a simple ground plane -->
 		<model name="groundplane" static="true">
 			<link name="plane">
 				<visual name="plane">
@@ -21,5 +24,24 @@
 				</collision>
 			</link>
 		</model>
+
+    <!-- the objectinstantiator plugin -->
+    <plugin name="ObjectInstantiatorPlugin" filename="libObjectInstantiatorPlugin.so">
+      <settings_lifetime>0.5</settings_lifetime>
+
+      <!-- object 1: an orange cup -->
+      <object>1</object>
+        <name_1>Cup</name_1>
+        <filename_1>cup.model</filename_1>
+        <scale_1>1 1 1</scale_1>
+        <colorrgba_1>1 0.5 0 1</colorrgba>
+    </plugin>
+
+    <!-- the analysistoolbox plugin-->
+<!--
+    <plugin name="AnalysisToolboxPlugin" filename="libAnalysisToolboxPlugin.so">
+    </plugin>
+-->
+
 	</world>
 </gazebo>

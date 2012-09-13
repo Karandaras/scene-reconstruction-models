@@ -1,21 +1,21 @@
 <gazebo version="1.0">
-  <model name="cup" static="true">
-    <origin pose="0 0 0 0 0 0"/>
+  <model name="@NAME@" static="true">
+    <origin pose="@POSX@ @POSY@ @POSZ@ @ROTR@ @ROTP@ @ROTY@"/>
     <link name="body">
       <collision name="cup">
         <geometry>
           <!-- scale="X Y Z" to scale the model if needed -->
-          <mesh filename="cup/cup.dae"/>
+          <mesh filename="cup/cup.dae" scale="@SCALE@"/>
         </geometry>
       </collision>
 
       <visual cast_shadows="true" name="cup">
         <geometry>
           <!-- scale="X Y Z" to scale the model if needed -->
-          <mesh filename="cup/cup.dae"/>
+          <mesh filename="cup/cup.dae" scale="@SCALE@"/>
         </geometry>
         <material>
-          <ambient rgba="1 0.65 0 1" />
+          <ambient rgba="@COLORRGBA@" />
         </material>
       </visual>
     </link>
