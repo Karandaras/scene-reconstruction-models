@@ -771,6 +771,7 @@
     </joint>
 
   <plugin name="RobotControllerPlugin" filename="libRobotControllerPlugin.so">
+    <settings_position_z_offset>0.33</settings_position_z_offset>
     <rcjoint>1</rcjoint>
       <gname_1>caesar_kinect_joint</gname_1>
       <fname_1>kinect</fname_1>
