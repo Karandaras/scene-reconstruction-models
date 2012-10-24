@@ -33,6 +33,7 @@
                     <geometry>
                         <plane>
                             <normal>0 0 1</normal>
+                            <size>100 100</size>
                         </plane>
                     </geometry>
                     <material>
@@ -43,6 +44,7 @@
                     <geometry>
                         <plane>
                             <normal>0 0 1</normal>
+                            <size>100 100</size>
                         </plane>
                     </geometry>
                 </collision>
@@ -627,17 +629,15 @@
             <link name="body">
                 <collision name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                 </collision>
                 <visual name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                     <material>
@@ -653,17 +653,15 @@
             <link name="body">
                 <collision name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                 </collision>
                 <visual name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                     <material>
@@ -679,17 +677,15 @@
             <link name="body">
                 <collision name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                 </collision>
                 <visual name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                     <material>
@@ -705,17 +701,15 @@
             <link name="body">
                 <collision name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                 </collision>
                 <visual name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                     <material>
@@ -731,17 +725,15 @@
             <link name="body">
                 <collision name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                 </collision>
                 <visual name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                     <material>
@@ -757,17 +749,15 @@
             <link name="body">
                 <collision name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                 </collision>
                 <visual name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                     <material>
@@ -783,17 +773,15 @@
             <link name="body">
                 <collision name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                 </collision>
                 <visual name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                     <material>
@@ -809,17 +797,15 @@
             <link name="body">
                 <collision name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                 </collision>
                 <visual name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                     <material>
@@ -835,17 +821,15 @@
             <link name="body">
                 <collision name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                 </collision>
                 <visual name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                     <material>
@@ -861,17 +845,15 @@
             <link name="body">
                 <collision name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                 </collision>
                 <visual name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                     <material>
@@ -887,17 +869,15 @@
             <link name="body">
                 <collision name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                 </collision>
                 <visual name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                     <material>
@@ -913,17 +893,15 @@
             <link name="body">
                 <collision name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                 </collision>
                 <visual name="cup">
                     <geometry>
-                        <!-- scale="X Y Z" to scale the model if needed -->
                         <mesh>
-                            <filename>models/cup.dae</filename>
+                            <uri>file://cup.dae</uri>
                         </mesh>
                     </geometry>
                     <material>
@@ -959,7 +937,7 @@
             <static>true</static>
         </model>
         <!-- the robot -->
-        <include filename="caesar.model" />
+        <include filename="caesar.model"></include>
         <!-- the objectinstantiator plugin -->
         <plugin name="ObjectInstantiatorPlugin" filename="libObjectInstantiatorPlugin.so">
             <!-- Position Offset to adjust different map origin -->
@@ -1019,7 +997,5 @@
             <name_12>Tabletop_Object_12</name_12>
             <model_12>cup12</model_12>
         </plugin>
-        <!-- the analysistoolbox plugin -->
-        <plugin name="AnalysisToolboxPlugin" filename="libAnalysisToolboxPlugin.so" />
     </world>
 </gazebo>
