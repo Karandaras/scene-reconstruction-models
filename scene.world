@@ -936,6 +936,318 @@
             </link>
             <static>true</static>
         </model>
+        <model name="cup1_clone">
+            <pose>0 0 -10 0 0 0</pose>
+            <link name="body">
+                <collision name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>0 0 1 1</ambient>
+                    </material>
+                    <cast_shadows>true</cast_shadows>
+                </visual>
+            </link>
+            <static>true</static>
+        </model>
+        <model name="cup2_clone">
+            <pose>0 0 -10 0 0 0</pose>
+            <link name="body">
+                <collision name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>0 0 1 1</ambient>
+                    </material>
+                    <cast_shadows>true</cast_shadows>
+                </visual>
+            </link>
+            <static>true</static>
+        </model>
+        <model name="cup3_clone">
+            <pose>0 0 -10 0 0 0</pose>
+            <link name="body">
+                <collision name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>0 0 1 1</ambient>
+                    </material>
+                    <cast_shadows>true</cast_shadows>
+                </visual>
+            </link>
+            <static>true</static>
+        </model>
+        <model name="cup4_clone">
+            <pose>0 0 -10 0 0 0</pose>
+            <link name="body">
+                <collision name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>0 0 1 1</ambient>
+                    </material>
+                    <cast_shadows>true</cast_shadows>
+                </visual>
+            </link>
+            <static>true</static>
+        </model>
+        <model name="cup5_clone">
+            <pose>0 0 -10 0 0 0</pose>
+            <link name="body">
+                <collision name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>0 0 1 1</ambient>
+                    </material>
+                    <cast_shadows>true</cast_shadows>
+                </visual>
+            </link>
+            <static>true</static>
+        </model>
+        <model name="cup6_clone">
+            <pose>0 0 -10 0 0 0</pose>
+            <link name="body">
+                <collision name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>0 0 1 1</ambient>
+                    </material>
+                    <cast_shadows>true</cast_shadows>
+                </visual>
+            </link>
+            <static>true</static>
+        </model>
+        <model name="cup7_clone">
+            <pose>0 0 -10 0 0 0</pose>
+            <link name="body">
+                <collision name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>0 0 1 1</ambient>
+                    </material>
+                    <cast_shadows>true</cast_shadows>
+                </visual>
+            </link>
+            <static>true</static>
+        </model>
+        <model name="cup8_clone">
+            <pose>0 0 -10 0 0 0</pose>
+            <link name="body">
+                <collision name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>0 0 1 1</ambient>
+                    </material>
+                    <cast_shadows>true</cast_shadows>
+                </visual>
+            </link>
+            <static>true</static>
+        </model>
+        <model name="cup9_clone">
+            <pose>0 0 -10 0 0 0</pose>
+            <link name="body">
+                <collision name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>0 0 1 1</ambient>
+                    </material>
+                    <cast_shadows>true</cast_shadows>
+                </visual>
+            </link>
+            <static>true</static>
+        </model>
+        <model name="cup10_clone">
+            <pose>0 0 -10 0 0 0</pose>
+            <link name="body">
+                <collision name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>0 0 1 1</ambient>
+                    </material>
+                    <cast_shadows>true</cast_shadows>
+                </visual>
+            </link>
+            <static>true</static>
+        </model>
+        <model name="cup11_clone">
+            <pose>0 0 -10 0 0 0</pose>
+            <link name="body">
+                <collision name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>0 0 1 1</ambient>
+                    </material>
+                    <cast_shadows>true</cast_shadows>
+                </visual>
+            </link>
+            <static>true</static>
+        </model>
+        <model name="cup12_clone">
+            <pose>0 0 -10 0 0 0</pose>
+            <link name="body">
+                <collision name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                </collision>
+                <visual name="cup">
+                    <geometry>
+                        <mesh>
+                            <uri>file://cup.dae</uri>
+                        </mesh>
+                    </geometry>
+                    <material>
+                        <ambient>0 0 1 1</ambient>
+                    </material>
+                    <cast_shadows>true</cast_shadows>
+                </visual>
+            </link>
+            <static>true</static>
+        </model>
+        <model name="table_clone">
+            <pose>0 0 -10 0 0 0</pose>
+            <link name="body">
+                <collision name="table">
+                    <geometry>
+                        <box>
+                            <size>.7 2 .1</size>
+                        </box>
+                    </geometry>
+                </collision>
+                <visual name="table">
+                    <geometry>
+                        <box>
+                            <size>.7 2 .1</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>0.55 0.23 0.07 1</ambient>
+                    </material>
+                    <cast_shadows>true</cast_shadows>
+                </visual>
+            </link>
+            <static>true</static>
+        </model>
         <!-- the robot -->
         <include filename="caesar.model"></include>
         <!-- the objectinstantiator plugin -->
