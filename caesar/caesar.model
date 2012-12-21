@@ -1064,7 +1064,6 @@
                 <factor_8>1.0</factor_8>
                 <offset_8>2.02416</offset_8>
                 <gripper_8>true</gripper_8>
-                <offset2_8>2.02416</offset2_8>
                 <gname2_8>caesar_katana_gripper_left</gname2_8>
         </plugin>
         <static>false</static>
