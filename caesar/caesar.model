@@ -979,7 +979,7 @@
                     <lower>-100</lower>
                     <upper>100</upper>
                 </limit>
-                <xyz>-1 0 0</xyz>
+                <xyz>1 0 0</xyz>
             </axis>
         </joint>
 
@@ -1061,9 +1061,10 @@
               <rcjoint>8</rcjoint>
                 <gname_8>caesar_katana_gripper_right</gname_8>
                 <fname_8>Katana_5</fname_8>
-                <factor_8>0.7</factor_8>
-                <offset_8>0.8</offset_8>
+                <factor_8>1.0</factor_8>
+                <offset_8>2.02416</offset_8>
                 <gripper_8>true</gripper_8>
+                <offset2_8>2.02416</offset2_8>
                 <gname2_8>caesar_katana_gripper_left</gname2_8>
         </plugin>
         <static>false</static>
