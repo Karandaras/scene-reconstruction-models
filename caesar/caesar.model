@@ -1,7 +1,6 @@
-<gazebo version="1.2">
+<sdf version="1.3">
     <model name="caesar">
         <!-- model definition (visuals and collision) -->
-
         <!-- base of the robot -->
         <link name="caesar_base">
             <inertial>
@@ -28,14 +27,12 @@
             </visual>
             <gravity>false</gravity>
         </link>
-
         <!-- rack holding monitor, kinect etc. -->
         <link name="caesar_rack">
             <inertial>
                 <mass>10.0</mass>
             </inertial>
             <pose>-0.45 0 0.63 0 0 0</pose>
-
             <!-- horizontal casts (flat on caesar_base) -->
             <collision name="horizontal_casts_1">
                 <pose>0.4325 0.18 0.02 0 0 0</pose>
@@ -77,7 +74,6 @@
                 </material>
                 <cast_shadows>true</cast_shadows>
             </visual>
-
             <!-- vertical casts, e.g. back rack -->
             <collision name="vertical_casts_1">
                 <pose>0.3 -0.18 0.5 0 0 0</pose>
@@ -119,7 +115,6 @@
                 </material>
                 <cast_shadows>true</cast_shadows>
             </visual>
-
             <!-- horizontal casts between vertical casts -->
             <collision name="horzontal_vertical_casts_1">
                 <pose>0.3 0 0.02 0 0 0</pose>
@@ -201,7 +196,6 @@
                 </material>
                 <cast_shadows>true</cast_shadows>
             </visual>
-
             <!-- rack monitor -->
             <collision name="rack_monitor">
                 <pose>0.3 0 0.54 0 -0.436332313 0</pose>
@@ -223,7 +217,6 @@
                 </material>
                 <cast_shadows>true</cast_shadows>
             </visual>
-
             <!-- red emergency button -->
             <collision name="red_emergency_button_1">
                 <pose>0.31 0 0.095 0 0 0</pose>
@@ -269,7 +262,6 @@
             </visual>
             <gravity>false</gravity>
         </link>
-
         <!-- katana arm -->
         <link name="caesar_katana_base">
             <inertial>
@@ -790,7 +782,6 @@
             </visual>
             <gravity>false</gravity>
         </link>
-
         <!-- kinect sensor -->
         <!-- base for the kinect sensor -->
         <link name="caesar_kinect_base">
@@ -818,7 +809,6 @@
             </visual>
             <gravity>false</gravity>
         </link>
-
         <!-- kinect sensor with fitting and additional sensor on top -->
         <link name="caesar_kinect_sensor">
             <inertial>
@@ -888,9 +878,7 @@
             </visual>
             <gravity>false</gravity>
         </link>
-
         <!-- joint definition -->
-
         <!-- connecting base and rack -->
         <joint name="caesar_rack" type="revolute">
             <parent>caesar_base</parent>
@@ -903,7 +891,6 @@
                 <xyz>0 0 0</xyz>
             </axis>
         </joint>
-
         <!-- katana arm joints and connection to base-->
         <joint name="caesar_katana_link4" type="revolute">
             <parent>caesar_base</parent>
@@ -982,7 +969,6 @@
                 <xyz>1 0 0</xyz>
             </axis>
         </joint>
-
         <!-- PTU pan -->
         <joint name="caesar_kinect_joint_pan" type="revolute">
             <parent>caesar_rack</parent>
@@ -995,7 +981,6 @@
                 <xyz>0 0 1</xyz>
             </axis>
         </joint>
-
         <!-- PTU tilt -->
         <joint name="caesar_kinect_joint_tilt" type="revolute">
             <parent>caesar_kinect_base</parent>
@@ -1008,64 +993,59 @@
                 <xyz>0 1 0</xyz>
             </axis>
         </joint>
-
         <plugin name="RobotControllerPlugin" filename="libRobotControllerPlugin.so">
             <!-- Position Offset to adjust different map origin -->
-              <settings_position_x_offset>-12</settings_position_x_offset>
-              <settings_position_y_offset>-4</settings_position_y_offset>
+            <settings_position_x_offset>-12</settings_position_x_offset>
+            <settings_position_y_offset>-4.2</settings_position_y_offset>
             <!-- Joint mapping -->
-              <!-- the PTU -->
-              <rcjoint>1</rcjoint>
-                <gname_1>caesar_kinect_joint_tilt</gname_1>
-                <fname_1>PanTilt_RX28_tilt</fname_1>
-                <factor_1>1</factor_1>
-                <offset_1>0</offset_1>
-                <rcjoint>2</rcjoint>
-                <gname_2>caesar_kinect_joint_pan</gname_2>
-                <fname_2>PanTilt_RX28_pan</fname_2>
-                <factor_2>-1</factor_2>
-                <offset_2>0</offset_2>
-
-              <!-- the Katana base -->
-              <rcjoint>3</rcjoint>
-                <gname_3>caesar_katana_link4</gname_3>
-                <fname_3>Katana_0</fname_3>
-                <factor_3>1</factor_3>
-                <offset_3>0</offset_3>
-
-              <!-- the Katana Arm joints -->
-              <rcjoint>4</rcjoint>
-                <gname_4>caesar_katana_link3</gname_4>
-                <fname_4>Katana_1</fname_4>
-                <factor_4>1</factor_4>
-                <offset_4>-1.8</offset_4>
-              <rcjoint>5</rcjoint>
-                <gname_5>caesar_katana_link2</gname_5>
-                <fname_5>Katana_2</fname_5>
-                <factor_5>1</factor_5>
-                <offset_5>-3</offset_5>
-              <rcjoint>6</rcjoint>
-                <gname_6>caesar_katana_link1</gname_6>
-                <fname_6>Katana_3</fname_6>
-                <factor_6>-1</factor_6>
-                <offset_6>-3</offset_6>
-
-              <!-- the Katana Gripper base -->
-              <rcjoint>7</rcjoint>
-                <gname_7>caesar_katana_gripper</gname_7>
-                <fname_7>Katana_4</fname_7>
-                <factor_7>-1</factor_7>
-                <offset_7>0</offset_7>
-
-              <!-- the Katana Gripper -->
-              <rcjoint>8</rcjoint>
-                <gname_8>caesar_katana_gripper_right</gname_8>
-                <fname_8>Katana_5</fname_8>
-                <factor_8>1.0</factor_8>
-                <offset_8>2.02416</offset_8>
-                <gripper_8>true</gripper_8>
-                <gname2_8>caesar_katana_gripper_left</gname2_8>
+            <!-- the PTU -->
+            <rcjoint>1</rcjoint>
+            <gname_1>caesar_kinect_joint_tilt</gname_1>
+            <fname_1>PanTilt_RX28_tilt</fname_1>
+            <factor_1>1</factor_1>
+            <offset_1>0</offset_1>
+            <rcjoint>2</rcjoint>
+            <gname_2>caesar_kinect_joint_pan</gname_2>
+            <fname_2>PanTilt_RX28_pan</fname_2>
+            <factor_2>-1</factor_2>
+            <offset_2>0</offset_2>
+            <!-- the Katana base -->
+            <rcjoint>3</rcjoint>
+            <gname_3>caesar_katana_link4</gname_3>
+            <fname_3>Katana_0</fname_3>
+            <factor_3>1</factor_3>
+            <offset_3>0</offset_3>
+            <!-- the Katana Arm joints -->
+            <rcjoint>4</rcjoint>
+            <gname_4>caesar_katana_link3</gname_4>
+            <fname_4>Katana_1</fname_4>
+            <factor_4>1</factor_4>
+            <offset_4>-1.8</offset_4>
+            <rcjoint>5</rcjoint>
+            <gname_5>caesar_katana_link2</gname_5>
+            <fname_5>Katana_2</fname_5>
+            <factor_5>1</factor_5>
+            <offset_5>-3</offset_5>
+            <rcjoint>6</rcjoint>
+            <gname_6>caesar_katana_link1</gname_6>
+            <fname_6>Katana_3</fname_6>
+            <factor_6>-1</factor_6>
+            <offset_6>-3</offset_6>
+            <!-- the Katana Gripper base -->
+            <rcjoint>7</rcjoint>
+            <gname_7>caesar_katana_gripper</gname_7>
+            <fname_7>Katana_4</fname_7>
+            <factor_7>-1</factor_7>
+            <offset_7>0</offset_7>
+            <!-- the Katana Gripper -->
+            <rcjoint>8</rcjoint>
+            <gname_8>caesar_katana_gripper_left</gname_8>
+            <fname_8>Katana_5</fname_8>
+            <factor_8>1.0</factor_8>
+            <offset_8>1.52416</offset_8>
+            <gripper_8>true</gripper_8>
+            <gname2_8>caesar_katana_gripper_right</gname2_8>
         </plugin>
         <static>false</static>
     </model>
-</gazebo>
+</sdf>
