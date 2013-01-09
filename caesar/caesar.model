@@ -1014,7 +1014,7 @@
             <gname_3>caesar_katana_link4</gname_3>
             <fname_3>Katana_0</fname_3>
             <factor_3>1</factor_3>
-            <offset_3>0</offset_3>
+            <offset_3>-0.1</offset_3>
             <!-- the Katana Arm joints -->
             <rcjoint>4</rcjoint>
             <gname_4>caesar_katana_link3</gname_4>
